@@ -6,8 +6,6 @@ out/
 coverage/
 *.tsbuildinfo
 
-.env
-.env.local
 .env.*.local
 !.env.example
 
@@ -31,9 +29,9 @@ extras/
 next-env.d.ts
 .artifacts/
 .vercel
-.env*
 
 .claude/launch.json
 
 docs/.vitepress/cache/
 docs/.vitepress/dist/
+config.bat
