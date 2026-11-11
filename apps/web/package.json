@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "bun --env-file=../../.env next dev --port 3000",
-    "build": "bun --env-file=../../.env ../../packages/db/src/check-drift.ts --guard-deploy && bun --env-file=../../.env next build && bun scripts/prepare-standalone.ts",
-    "start": "node --env-file=../../.env .next/standalone/apps/web/start.mjs",
+    "dev": "node init && bun --env-file=../../.env next dev --port 3000",
+    "build": "node init && bun --env-file=../../.env ../../packages/db/src/check-drift.ts --guard-deploy && bun --env-file=../../.env next build && bun scripts/prepare-standalone.ts",
+    "start": "node init && node --env-file=../../.env .next/standalone/apps/web/start.mjs",
     "typecheck": "tsc --noEmit",
     "test": "bun --env-file=../../.env test tests --timeout 20000",
     "test:e2e": "bun --env-file=../../.env --bun playwright test"
